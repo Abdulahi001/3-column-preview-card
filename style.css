@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@700&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Exo+2&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@700&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* ## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+ */
+
+:root{
+    --bright-orange:hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray:hsl(0, 0%, 95%);
+
+
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+    font-family: 'Big Shoulders Display', sans-serif;
+    background: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    height: 600px;
+    width: 1100px;
+    
+    
+}
+.container .content{
+    height: 80%;
+    
+}
+.container .box  .content img{
+    width: 70px;
+}
+.container .box{
+    flex-direction: column;
+    
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.container .box h2{
+
+    font-size: 40px;
+    color: var(--very-light-gray);
+    font-weight: 700;
+    
+}
+.container .box p{
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transparent-white);
+    font-weight: 400;
+
+
+}
+.container .item-1{
+    background-color: var(--bright-orange);
+    border-top-left-radius:10px ;
+    border-bottom-left-radius: 10px;
+}
+.container .item-2{
+    background-color: var(--dark-cyan);
+}
+.container .item-3{
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container .box button{
+    width: 150px;
+    cursor: pointer;
+    padding: 20px 0;
+    border-radius: 40px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.container .item-1 button{
+    color: var(--bright-orange);
+}
+.container .item-2 button{
+    color: var(--dark-cyan);
+}
+.container .item-3 button{
+    color: var(--very-dark-cyan);
+}
+.container .box button:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+
+}
+
+
+
+
+
+@media (max-width: 450px) {
+    
+.container {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+}
+.container .item-1{
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+}
+.container .item-3{
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+}
+}
